@@ -141,4 +141,12 @@ class PasswordVerifyTest {
         assertEquals(esperado.getMsjError(), actual.getMsjError());
     }
 
+    @Test
+    void validaPassword16() {
+        PasswordResult esperado = new PasswordResult(true, "");
+        PasswordResult actual = PasswordVerify.validaPassword("#P4blit0cl4v0uncl4vit0#");
+        assertEquals(esperado.isValid(), actual.isValid());
+        assertEquals(esperado.getMsjError(), actual.getMsjError());
+    }
+
 }
