@@ -125,4 +125,12 @@ class PasswordVerifyTest {
         assertEquals(esperado.getMsjError(), actual.getMsjError());
     }
 
+    @Test
+    void validaPassword14() {
+        PasswordResult esperado = new PasswordResult(false, "La contrasenya ha de contenir almenys un caràcter especial");
+        PasswordResult actual = PasswordVerify.validaPassword("holacaracola12A");
+        assertEquals(esperado.isValid(), actual.isValid());
+        assertEquals(esperado.getMsjError(), actual.getMsjError());
+    }
+
 }
