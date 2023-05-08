@@ -13,7 +13,7 @@ public class PasswordResult {
         return isValid;
     }
 
-    public String getErrorMessage() {
+    public String getMsjError() {
         return msjError;
     }
 }
