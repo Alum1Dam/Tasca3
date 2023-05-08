@@ -50,8 +50,8 @@ class PasswordVerifyTest {
     void validaPassword5() {
         PasswordResult esperado = new PasswordResult(false, "La contrasenya ha de tenir almenys 8 caràcters\n"
                 + "La contrasenya ha de contenir almenys 2 números\n"
-                + "La contrasenya ha de contenir almenys un caràcter especial");
-        PasswordResult actual = PasswordVerify.validaPassword("holA");
+                + "La contrasenya ha de contenir almenys una lletra majúscula\n");
+        PasswordResult actual = PasswordVerify.validaPassword("hola!");
         assertEquals(esperado.isValid(), actual.isValid());
         assertEquals(esperado.getMsjError(), actual.getMsjError());
     }
