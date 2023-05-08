@@ -101,4 +101,12 @@ class PasswordVerifyTest {
         assertEquals(esperado.getMsjError(), actual.getMsjError());
     }
 
+    @Test
+    void validaPassword11() {
+        PasswordResult esperado = new PasswordResult(false, "La contrasenya ha de tenir almenys 8 caràcters\n");
+        PasswordResult actual = PasswordVerify.validaPassword("ho12A!");
+        assertEquals(esperado.isValid(), actual.isValid());
+        assertEquals(esperado.getMsjError(), actual.getMsjError());
+    }
+
 }
