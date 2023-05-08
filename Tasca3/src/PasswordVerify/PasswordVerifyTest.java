@@ -74,4 +74,13 @@ class PasswordVerifyTest {
         assertEquals(esperado.getMsjError(), actual.getMsjError());
     }
 
+    @Test
+    void validaPassword8() {
+        PasswordResult esperado = new PasswordResult(false, "La contrasenya ha de contenir almenys una lletra majúscula\n"
+                + "La contrasenya ha de contenir almenys un caràcter especial");
+        PasswordResult actual = PasswordVerify.validaPassword("holacaracola12");
+        assertEquals(esperado.isValid(), actual.isValid());
+        assertEquals(esperado.getMsjError(), actual.getMsjError());
+    }
+
 }
