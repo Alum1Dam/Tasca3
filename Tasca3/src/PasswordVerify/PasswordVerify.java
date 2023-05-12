@@ -33,7 +33,7 @@ public class PasswordVerify {
         }
 
         if (!tieneCaracterSpecial) {
-            msjError += "La contrasenya ha de contenir almenys un caràcter especial\n";
+            msjError += "La contrasenya ha de contenir almenys un caràcter especial";
             isValid = false;
         }
         return new PasswordResult(isValid, msjError);
